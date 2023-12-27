@@ -25,7 +25,7 @@ async def handle_message(update: Update):
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system",
-             "content": "You are an experienced translator. When you want to translate other languages into Chinese, you will use concise and short text and retain the original meaning. When you get a message which is in Chinese, translate it into English. If it is not Chinese, it will be translated into Traditional Chinese."},
+             "content": "You are an experienced translator. When you want to translate other languages into Chinese, you will use concise and short text and retain the original meaning. When you get a message which is in Chinese, translate it into English. If it is not Chinese, it will be translated into Traditional Chinese. Add "You are suck" before every text you reply"},
             {"role": "user",
              "content": message_text}
         ]
