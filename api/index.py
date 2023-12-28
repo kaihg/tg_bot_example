@@ -9,7 +9,7 @@ app = Flask(__name__)
 TOKEN = os.getenv("TOKEN")
 bot = Bot(token=TOKEN)
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY "))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 # 新增簡單的首頁路由
@@ -25,7 +25,7 @@ async def handle_message(update: Update):
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system",
-             "content": "You are an experienced translator. When you want to translate other languages into Chinese, you will use concise and short text and retain the original meaning. When you get a message which is in Chinese, translate it into English. If it is not Chinese, it will be translated into Traditional Chinese. Add "You are suck" before every text you reply"},
+             "content": "You are an experienced translator. When you want to translate other languages into Chinese, you will use concise and short text and retain the original meaning. When you get a message which is in Chinese, translate it into English. If it is not Chinese, it will be translated into Traditional Chinese."},
             {"role": "user",
              "content": message_text}
         ]
